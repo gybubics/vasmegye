@@ -63,3 +63,15 @@ for sor in matrix:
         break
     
 #9. feladat
+print(     f'9. feladat: Statisztika')
+szotar = dict()
+for sor in matrix:
+    év = évszám(sor)
+    szotar[év] = 0
+    
+for sor in matrix:
+    év = évszám(sor)
+    szotar[év] += 1
+
+for év,darab in szotar.items():
+     print(f'        {év} - {darab} fő')
